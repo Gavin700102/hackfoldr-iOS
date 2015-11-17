@@ -9,8 +9,10 @@ target "hackfoldr-iOS" do
   pod 'AFCSVParserResponseSerializer'
   pod 'MagicalRecord', '~> 2.2'
 
+  # ViewController
   pod 'QuickDialog', :git => 'https://github.com/escoz/QuickDialog', :branch => 'master'
   pod 'TOWebViewController'
+  pod 'FLAnimatedImage'
 
   # Track crash
   pod 'Fabric'
