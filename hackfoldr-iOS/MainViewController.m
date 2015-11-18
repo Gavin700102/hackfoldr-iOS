@@ -23,7 +23,7 @@
 #import "TOWebViewController+HackfoldrField.h"
 #import "UIAlertView+AFNetworking.h"
 
-@interface MainViewController () <UITableViewDelegate, UINavigationControllerDelegate, UIAlertViewDelegate>
+@interface MainViewController () <UITableViewDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, SFSafariViewControllerDelegate>
 @property (nonatomic, strong) ListFieldViewController *listViewController;
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @end
@@ -139,8 +139,10 @@
 
         UIViewController *vc;
         if (NSClassFromString(@"SFSafariViewController")) {
-            vc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:rowOfField.urlString]];
-            vc.title = rowOfField.name;
+            SFSafariViewController *svc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:rowOfField.urlString]];
+            svc.title = rowOfField.name;
+            svc.delegate = self;
+            vc = svc;
         } else {
             TOWebViewController *webViewController = [[TOWebViewController alloc] init];
             webViewController.showPageTitles = YES;
@@ -171,6 +173,13 @@
     if ([HackfoldrClient sharedClient].lastPage) {
         [self showListViewController];
     }
+}
+
+#pragma mark - SFSafariViewControllerDelegate
+
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller
+{
+
 }
 
 #pragma mark - Actions
