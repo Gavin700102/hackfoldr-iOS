@@ -9,6 +9,8 @@
 #import "MainViewController.h"
 
 #import "AppDelegate.h"
+// View
+#import "FLAnimatedImage.h"
 // Model & Client
 #import <MagicalRecord/MagicalRecord.h>
 #import "HackfoldrClient.h"
@@ -26,6 +28,7 @@
 @interface MainViewController () <UITableViewDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, SFSafariViewControllerDelegate>
 @property (nonatomic, strong) ListFieldViewController *listViewController;
 @property (nonatomic, strong) UIImageView *backgroundImageView;
+@property (nonatomic, strong) FLAnimatedImageView *loadingImageView;
 @end
 
 @implementation MainViewController
@@ -103,6 +106,21 @@
                                                 size.height/2.f - imageSize/2.f,
                                                 imageSize,
                                                 imageSize);
+}
+
+- (void)showLoadingLogoForView:(UIView *)view {
+    CGSize size = CGSizeMake(100, 100);
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"g0v" ofType:@"gif"];
+    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:path]];
+    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
+    imageView.animatedImage = image;
+    imageView.frame = CGRectMake(CGRectGetWidth(view.bounds) / 2 - size.width / 2,
+                                 CGRectGetHeight(view.bounds) / 2 - size.height / 2,
+                                 size.width,
+                                 size.height);
+    [view addSubview:imageView];
+
+    self.loadingImageView = imageView;
 }
 
 #pragma mark - View Flow
