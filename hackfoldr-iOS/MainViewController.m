@@ -23,7 +23,7 @@
 #import "TOWebViewController+HackfoldrField.h"
 #import "UIAlertView+AFNetworking.h"
 
-@interface MainViewController () <UITableViewDelegate, UINavigationControllerDelegate, UIAlertViewDelegate>
+@interface MainViewController () <UITableViewDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, SFSafariViewControllerDelegate>
 @property (nonatomic, strong) ListFieldViewController *listViewController;
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @end
