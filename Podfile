@@ -12,6 +12,21 @@ target "hackfoldr-iOS" do
   pod 'QuickDialog', :git => 'https://github.com/escoz/QuickDialog', :branch => 'master'
   pod 'TOWebViewController'
 
+  pod 'React', :git => 'https://github.com/facebook/react-native/',
+      :subspecs => [
+        'ART',
+        'RCTActionSheet',
+        'RCTAdSupport',
+        'RCTGeolocation',
+        'RCTImage',
+        'RCTLinkingIOS',
+        'RCTNetwork',
+        'RCTSettings',
+        'RCTText',
+        'RCTVibration',
+        'RCTWebSocket'
+      ], :tag => 'v0.23.1'
+
   # Track crash
   pod 'Fabric'
   pod 'Crashlytics'

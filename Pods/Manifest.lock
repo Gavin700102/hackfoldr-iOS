@@ -43,6 +43,30 @@ PODS:
   - QuickDialog (1.0.2):
     - QuickDialog/Core (= 1.0.2)
   - QuickDialog/Core (1.0.2)
+  - React/ART (0.23.1):
+    - React/Core
+  - React/Core (0.23.1)
+  - React/RCTActionSheet (0.23.1):
+    - React/Core
+  - React/RCTAdSupport (0.23.1):
+    - React/Core
+  - React/RCTGeolocation (0.23.1):
+    - React/Core
+  - React/RCTImage (0.23.1):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.23.1):
+    - React/Core
+  - React/RCTNetwork (0.23.1):
+    - React/Core
+  - React/RCTSettings (0.23.1):
+    - React/Core
+  - React/RCTText (0.23.1):
+    - React/Core
+  - React/RCTVibration (0.23.1):
+    - React/Core
+  - React/RCTWebSocket (0.23.1):
+    - React/Core
   - TOWebViewController (2.2.3):
     - TOWebViewController/Core (= 2.2.3)
   - TOWebViewController/Core (2.2.3)
@@ -58,17 +82,34 @@ DEPENDENCIES:
   - OHHTTPStubs
   - OHHTTPStubs/XCTestExpectation
   - QuickDialog (from `https://github.com/escoz/QuickDialog`, branch `master`)
+  - React/ART (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
+  - React/RCTActionSheet (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
+  - React/RCTAdSupport (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
+  - React/RCTGeolocation (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
+  - React/RCTImage (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
+  - React/RCTLinkingIOS (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
+  - React/RCTNetwork (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
+  - React/RCTSettings (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
+  - React/RCTText (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
+  - React/RCTVibration (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
+  - React/RCTWebSocket (from `https://github.com/facebook/react-native/`, tag `v0.23.1`)
   - TOWebViewController
 
 EXTERNAL SOURCES:
   QuickDialog:
     :branch: master
     :git: https://github.com/escoz/QuickDialog
+  React:
+    :git: https://github.com/facebook/react-native/
+    :tag: v0.23.1
 
 CHECKOUT OPTIONS:
   QuickDialog:
     :commit: 9947f43797a1e2d8979d43a219d92172dee251ed
     :git: https://github.com/escoz/QuickDialog
+  React:
+    :git: https://github.com/facebook/react-native/
+    :tag: v0.23.1
 
 SPEC CHECKSUMS:
   AFCSVParserResponseSerializer: 057305eda68f4dc9d6c2603412cdd3de21d8ba44
@@ -80,6 +121,7 @@ SPEC CHECKSUMS:
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   OHHTTPStubs: 8cf0cfe6f34f13fc88fdf5b2a1b2c2536e8c0261
   QuickDialog: f0c3e254c91182fa3f91fdb479ccac4a11b459e1
+  React: 0bc1e9a6369dc610ff0b29415ed0cab5229614f5
   TOWebViewController: ca47b9aeefe66acb3353d197dc8270338540b116
 
 COCOAPODS: 0.39.0
